@@ -1,0 +1,283 @@
+{
+	"entryPagePath": "pages/login_page/login_page",
+	"pages": [
+		//pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/user/index/index",
+			"style": {
+				"navigationBarTitleText": "疫苗预约系统"
+			}
+		},
+		{
+			"path": "pages/user/my/my",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/user/index/knowledge/knowledge",
+			"style": {
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/user/index/knowledge/article_display/article_display",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/user/my/user_my_personInfo/user_my_personInfo",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/user/my/reservationInfo/reservationInfo",
+			"style": {
+				"navigationBarTitleText": "预约信息",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/user/my/reservationInfo/reservationInfo_detail/reservationInfo_detail",
+			"style": {
+				"navigationBarTitleText": "预约信息详情",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/user/my/setting/setting",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/user/index/vaccine_reservation/vaccine_type_selection/vaccine_type_selection",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/user/index/vaccine_reservation/vaccine_place_selection/vaccine_place_selection",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/user/index/vaccine_reservation/reservation_info_selection/reservation_info_selection",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/user/index/vaccine_reservation/reservation_order_detail/reservation_order_detail",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/reservation_plan_manage/reservation_plan_manage",
+			"style": {
+				"navigationBarTitleText": "预约计划管理",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/userInfo_manage/userInfo_manage",
+			"style": {
+				"navigationBarTitleText": "用户信息管理",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/userInfo_manage/userInfo_edit/userInfo_edit",
+			"style": {
+				"navigationBarTitleText": "编辑/查看用户信息",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/userInfo_manage/userInfo_add/userInfo_add",
+			"style": {
+				"navigationBarTitleText": "新增用户信息",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/vaccineInfo_manage/vaccineInfo_manage",
+			"style": {
+				"navigationBarTitleText": "疫苗信息管理",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/vaccineInfo_manage/vaccineInfo_add/vaccineInfo_add",
+			"style": {
+				"navigationBarTitleText": "新增疫苗信息",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/vaccineInfo_manage/vaccineInfo_edit/vaccineInfo_edit",
+			"style": {
+				"navigationBarTitleText": "编辑/查看疫苗信息",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/popularScienceInfo_manage/popularScienceInfo_manage",
+			"style": {
+				"navigationBarTitleText": "科普信息管理",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/admin/index/index",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+			}
+		},
+		{
+			"path": "pages/admin/vaccination/vaccination",
+			"style": {
+				"navigationBarTitleText": "疫苗接种",
+				"enablePullDownRefresh": false
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/popularScienceInfo_manage/popularScienceInfo_edit/popularScienceInfo_edit",
+			"style": {
+				"navigationBarTitleText": "科普信息编辑",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/popularScienceInfo_manage/popularScienceInfo_add/popularScienceInfo_add",
+			"style": {
+				"navigationBarTitleText": "新增科普信息",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/reservationInfo_manage/reservationInfo_manage",
+			"style": {
+				"navigationBarTitleText": "预约信息管理",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/reservationInfo_manage/reservationInfo_add/reservationInfo_add",
+			"style": {
+				"navigationBarTitleText": "新增预约信息",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/reservationInfo_manage/reservationInfo_detail/reservationInfo_detail",
+			"style": {
+				"navigationBarTitleText": "预约信息详情",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/reservationInfo_manage/reservationInfo_edit/reservationInfo_edit",
+			"style": {
+				"navigationBarTitleText": "编辑预约信息",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/reservation_plan_manage/reservation_plan_add/reservation_plan_add",
+			"style": {
+				"navigationBarTitleText": "新增预约计划",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/reservation_plan_manage/reservation_plan_time/reservation_plan_time",
+			"style": {
+				"navigationBarTitleText": "时段设置",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/reservation_plan_manage/reservation_plan_edit/reservation_plan_edit",
+			"style": {
+				"navigationBarTitleText": "编辑预约计划",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/admin/info_manage/reservation_plan_manage/reservation_plan_detail/reservation_plan_detail",
+			"style": {
+				"navigationBarTitleText": "预约计划详情",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/login_page/login_page",
+			"style": {
+				"navigationBarTitleText": "登录界面",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/login_page/adminLogin_page/adminLogin_page",
+			"style": {
+				"navigationBarTitleText": "登录页面",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/admin/person_center/person_center",
+			"style": {
+				"navigationBarTitleText": "个人中心",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/admin/person_center/admin_personInfo/admin_personInfo",
+			"style": {
+				"navigationBarTitleText": "个人信息",
+				"enablePullDownRefresh": true
+			}
+		}
+	],
+	"tabBar": {
+		"custom": true,
+		"backgroundColor": "#fefefe",
+		"color": "#999999",
+		"selectedColor": "#00C29D",
+		"list": [
+			{
+				"pagePath": "pages/user/index/index",
+				"text": "首页",
+				"iconPath": "static/global/tabBar/home.png",
+				"selectedIconPath": "static/global/tabBar/home_cur.png"
+			},
+			{
+				"pagePath": "pages/user/my/my",
+				"text": "我的",
+				"iconPath": "static/global/tabBar/my.png",
+				"selectedIconPath": "static/global/tabBar/my_cur.png"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "疫苗预约系统",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {}
+}
