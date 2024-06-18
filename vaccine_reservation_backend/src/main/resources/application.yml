@@ -20,5 +20,5 @@ server:
 
 wx:
   miniapp:
-    appid: 小程序ID
-    secret: 小程序密钥
+    appid: "小程序ID"
+    secret: "小程序密钥"
