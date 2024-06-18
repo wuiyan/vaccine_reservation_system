@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wuyan.vaccinereservation.mapper.ReservationInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.wuyan.vaccinereservation.model.entity.ReservationInfo">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="userId" column="user_id" jdbcType="INTEGER"/>
+        <result property="vaccineId" column="vaccine_id" jdbcType="INTEGER"/>
+        <result property="planId" column="plan_id" jdbcType="INTEGER"/>
+        <result property="nowDose" column="now_dose" jdbcType="INTEGER"/>
+        <result property="nowTime" column="now_time" jdbcType="TIMESTAMP"/>
+        <result property="rvStartDatetime" column="rv_start_datetime" jdbcType="TIMESTAMP"/>
+        <result property="rvEndDatetime" column="rv_end_datetime" jdbcType="TIMESTAMP"/>
+        <result property="rvStatus" column="rv_status" jdbcType="TINYINT"/>
+        <result property="isDelete" column="is_delete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,user_id,vaccine_id,
+        plan_id,now_dose,now_time,
+        rv_start_datetime,rv_end_datetime,rv_status,
+        is_delete
+    </sql>
+    <delete id="deleteReservationInfo">
+        delete from reservation_info where id=#{id}
+    </delete>
+
+    <select id="selectReservationInfo" resultMap="BaseResultMap">
+        SELECT * FROM reservation_info
+    </select>
+
+    <resultMap id="ReservationInfoDtoResultMap" type="com.wuyan.vaccinereservation.model.dto.ReservationInfoDto">
+        <id property="id" column="id" jdbcType="INTEGER"/>
+        <result property="nowDose" column="now_dose" jdbcType="INTEGER"/>
+        <result property="nowTime" column="now_time" jdbcType="TIMESTAMP"/>
+        <result property="rvStartDatetime" column="rv_start_datetime" jdbcType="TIMESTAMP"/>
+        <result property="rvEndDatetime" column="rv_end_datetime" jdbcType="TIMESTAMP"/>
+        <association property="user" column="user_id" select="com.wuyan.vaccinereservation.mapper.UserMapper.selectUserById"/>
+        <association property="vaccineInfo" column="vaccine_id" select="com.wuyan.vaccinereservation.mapper.VaccineInfoMapper.selectVaccineById"/>
+        <association property="plan" column="plan_id" select="com.wuyan.vaccinereservation.mapper.ReservationPlanMapper.selectByPlanId"/>
+    </resultMap>
+    <select id="selectReservationInfoDto" resultMap="ReservationInfoDtoResultMap">
+        SELECT * FROM reservation_info where is_delete = 0
+    </select>
+
+    <select id="getReservationInfoDto"  resultMap="ReservationInfoDtoResultMap">
+        SELECT * FROM reservation_info where id=#{id}
+    </select>
+
+
+</mapper>

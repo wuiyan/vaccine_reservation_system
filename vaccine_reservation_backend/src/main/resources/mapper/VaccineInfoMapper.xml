@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wuyan.vaccinereservation.mapper.VaccineInfoMapper">
+
+    <resultMap id="BaseResultMap" type="com.wuyan.vaccinereservation.model.entity.VaccineInfo">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="vcNumber" column="vc_number" jdbcType="VARCHAR"/>
+            <result property="vcName" column="vc_name" jdbcType="VARCHAR"/>
+            <result property="dose" column="dose" jdbcType="INTEGER"/>
+            <result property="spaceTime" column="space_time" jdbcType="INTEGER"/>
+            <result property="price" column="price" jdbcType="DECIMAL"/>
+            <result property="type" column="type" jdbcType="INTEGER"/>
+            <result property="place" column="place" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,vc_number,vc_name,
+        dose,space_time,price,
+        type,place
+    </sql>
+    <select id="selectByNumber" resultMap="BaseResultMap">
+        SELECT * FROM vaccine_info WHERE vc_number = #{vcNumber}
+    </select>
+
+    <select id="selectVaccineById" resultMap="BaseResultMap">
+        SELECT * FROM vaccine_info WHERE id = #{id}
+    </select>
+
+    <select id="selectByType" resultMap="BaseResultMap">
+        SELECT DISTINCT vc_name,vc_number FROM vaccine_info WHERE type=#{type};
+    </select>
+
+</mapper>
