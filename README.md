@@ -22,6 +22,3 @@ Springboot + Uniapp + Mybatis-PlUS + MySQL
 3. 在HBuilder工具中的配置中写入小程序ID，同时将其和微信开发者工具关联后启动前端项目
 
 
-
-
-
